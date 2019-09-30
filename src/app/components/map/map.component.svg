@@ -1,0 +1,55 @@
+<svg
+ xmlns:html='http://www.w3.org/1999/xhtml'
+ xmlns:xlink='http://www.w3.org/1999/xlink'
+ xmlns="http://www.w3.org/2000/svg"
+ width="100%" height="100%"
+ viewBox="0 0 207.77765 105.29322"
+ version="1.1"
+ id="A Gaianist Church"
+>
+  <title>Teams</title>
+  <!--<html:base href='/'/>-->
+  <defs id="defs2">
+    <style>
+      .leg {
+        stroke: white;
+      }
+      path {
+        stroke-opacity: 0.75;
+        stroke-width: 0.5px;
+      }
+      .team {
+        stroke: black;
+      }
+      #leg-5r, #leg-4r, #leg-3l {
+        fill: #D00;
+      }
+      #leg-1r, #leg-1l, #leg-5l {
+        fill: #00D;
+      }
+      #leg-2l, #leg-2r, #leg-3r, #leg-4l {
+        fill: #D0D;
+      }
+      #team-0 { fill: #8F8F8F }
+      #team-1 { fill: #FC8403 }
+      #team-2 { fill: #0D0 }
+      #team-3 { fill: yellow }
+      #team-4 { fill: pink }
+      #team-5 { fill: #0DD }
+      #team-6 { fill: white }
+      #team-7 { fill: black }
+      #team-8 { fill: #987122 }
+      #team-9 { fill: #B87333 }
+      path:hover { fill-opacity: 0.75; }
+    </style>
+    <script xlink:href='js'></script>
+  </defs>
+  <g transform="translate(-1.1885598,-92.006537)">
+    <ng-template ngFor let-leg [ngForOf]='legs'>
+      <path [attr.d]='leg.path' [id]='leg.id' class='leg'/>
+    </ng-template>
+    <ng-template ngFor let-team [ngForOf]='teams'>
+      <path [attr.d]='team.path' [id]='team.id' class='team'/>
+    </ng-template>
+  </g>
+</svg>
