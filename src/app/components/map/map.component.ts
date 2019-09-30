@@ -18,9 +18,9 @@ export class MapComponent implements OnInit {
       'm 105.26868,155.48591 -0.0172,11.35383 46.50489,-26.19241 49.17759,41.82768 -28.19654,-40.02928 -22.1116,-15.49702 z',
       'm 104.88608,155.48591 0.0172,11.35383 L 58.398393,140.64733 9.2207987,182.47501 37.417339,142.44573 59.528944,126.94871 Z',
       'm 105.07738,143.36676 c 13.28564,-8.72047 29.26515,-20.69178 44.79248,-30.78115 l 36.28572,25.70238 19.27678,50.27083 -32.69494,-46.11309 -22.1116,-15.49702 -45.35714,28.5372 z',
-      'M 105.07738,143.36676 C 91.791744,134.64629 75.812233,122.67498 60.284898,112.58561 l -36.285714,25.70238 -19.2767863,50.27083 32.6949413,-46.11309 22.111605,-15.49702 45.357136,28.5372 z',
+      'm 105.07738,143.36676 C 91.791744,134.64629 75.812233,122.67498 60.284898,112.58561 l -36.285714,25.70238 -19.2767863,50.27083 32.6949413,-46.11309 22.111605,-15.49702 45.357136,28.5372 z',
       'm 105.07738,128.36038 44.79248,-36.185486 55.18453,42.333336 3.77976,62.74404 -22.67857,-58.96428 -36.28572,-25.70238 -44.79248,30.78115 z',
-      'M 105.07738,128.36038 60.284898,92.174894 5.1003737,134.50823 1.3206121,197.25227 23.999184,138.28799 60.284898,112.58561 105.07738,143.36676 Z',
+      'M 105.07738,128.36038 60.284898,92.174894 5.1003737,134.50823 1.3206121,197.25227 23.999184,138.28799 60.284898,112.58561 105.07738,143.36676 z',
     ]
     .map(
       (path, idx) => {
@@ -31,6 +31,7 @@ export class MapComponent implements OnInit {
         return new Leg({
           id: `leg-${positions[idx]}`,
           path: path,
+          name: 'BLUE',
         })
       }
     )
@@ -46,7 +47,7 @@ export class MapComponent implements OnInit {
     { rune: 'ᛠ', name: 'Svartálfaheimr', inhabitants: 'Dwarves' },
     { rune: 'ᛁ', name: 'Niflheimr', inhabitants: 'Ice' },
     { rune: 'ᛊ', name: 'Múspellsheimr', inhabitants: 'Fire' },
-    { rune: '🌳', name: 'Yggdrasil' },
+    { rune: '🌳', name: 'Yggdrasil', inhabitants: 'All non-human life' },
     { rune: '🐲', name: 'Níðhöggr', inhabitants: 'Dragon who gnaws at Yggdrasil' },
     { rune: '🐿️', name: 'Ratatoskr', inhabitants: 'Squirrel who lives in Yggdrasil' },
     { rune: '🦅', name: 'Veðrfölnir', inhabitants: 'Hawk sitting on an eagle perched on Yggdrasil' },
@@ -69,7 +70,12 @@ export class MapComponent implements OnInit {
       (path, idx) => new Team({
         path: path,
         id: `team-${idx}`,
-        icon: this.realms[idx].rune,
+        name: this.realms[idx].inhabitants,
+        icon: {
+          data: this.realms[idx].rune,
+          x: '45%',
+          y: (idx * 8 + 105) + 'px',
+        },
       })
     )
   )
@@ -79,7 +85,7 @@ export class MapComponent implements OnInit {
   ngOnInit() {}
 
   mouseover(part) {
-    this.hovered = part.id
+    this.hovered = part.name
   }
 
   mouseout(part) {
