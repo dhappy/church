@@ -1,0 +1,4 @@
+<svg:path [attr.d]='leg.path' [id]='leg.id' [ngClass]='typeof(leg)'></svg:path>
+<svg:text style="font-size: 24px;">
+  <svg:textPath attr.xlink:href='#{{leg.id}}' startOffset="50%" text-anchor="middle">{{leg.icon}}</svg:textPath>
+</svg:text>
