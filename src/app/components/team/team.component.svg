@@ -3,11 +3,11 @@
  [attr.x]='team.x' [attr.y]='team.y'
 >
   <svg:path
-   [attr.d]='team.path'
-   [id]='team.id'
-   class='team'
+  [attr.d]='team.path'
+  [id]='team.id'
+  class='team'
   ></svg:path>
   <ng-template [ngIf]='team.icon'>
-    <svg:text x='50%' y='68%'>{{team.icon}}</svg:text>
+    <svg:text x='50%' y='66%'>{{team.icon}}</svg:text>
   </ng-template>
 </svg:svg>

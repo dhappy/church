@@ -12,7 +12,15 @@ text {
 #team-3 { fill: yellow }
 #team-4 { fill: pink }
 #team-5 { fill: #0DD }
-#team-6 { fill: white }
-#team-7 { fill: black }
+#team-7 { fill: white }
+#team-6 { fill: black }
 #team-8 { fill: #987122 }
 #team-9 { fill: #B87333 }
+
+.raised {
+  transform: translate(10px, -10px);
+}
+
+.raised:hover {
+  transform: translate(3px, 3px);
+}

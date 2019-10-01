@@ -12,7 +12,7 @@
     <g app-leg [leg]='leg' (mouseover)='mouseover(leg)' mouseout='mouseout(leg)'></g>
   </ng-template>
   <ng-template ngFor let-team [ngForOf]='teams'>
-    <g app-team [team]='team' (mouseover)='mouseover(team)' mouseout='mouseout(team)'></g>
+    <g app-team [team]='team' (mouseover)='mouseover(team)' mouseout='mouseout(team)' class='raised'></g>
   </ng-template>
   <text x='50%' y='0.75em'>{{hovered}}</text>
 </svg>
