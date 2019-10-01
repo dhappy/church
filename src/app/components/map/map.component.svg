@@ -3,18 +3,16 @@
  xmlns:xlink='http://www.w3.org/1999/xlink'
  xmlns="http://www.w3.org/2000/svg"
  width="100%" height="100%"
- viewBox="0 0 207.77765 105.29322"
+ viewBox="0 0 200 100"
  version="1.1"
  id="A Gaianist Church"
 >
-  <title>Teams</title>
-  <text id='hovered' x='50%' y='1em'>{{hovered}}</text>
-  <g transform="translate(-1.1885598,-92.006537)">
-    <ng-template ngFor let-leg [ngForOf]='legs'>
-      <g app-leg [leg]='leg' (mouseover)='mouseover(leg)' mouseout='mouseout(leg)'></g>
-    </ng-template>
-    <ng-template ngFor let-team [ngForOf]='teams'>
-      <g app-leg [leg]='team' (mouseover)='mouseover(team)' mouseout='mouseout(team)'></g>
-    </ng-template>
-  </g>
+  <defs><title>Church</title></defs>
+  <ng-template ngFor let-leg [ngForOf]='legs'>
+    <g app-leg [leg]='leg' (mouseover)='mouseover(leg)' mouseout='mouseout(leg)'></g>
+  </ng-template>
+  <ng-template ngFor let-team [ngForOf]='teams'>
+    <g app-team [team]='team' (mouseover)='mouseover(team)' mouseout='mouseout(team)'></g>
+  </ng-template>
+  <text x='50%' y='0.75em'>{{hovered}}</text>
 </svg>
