@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LegComponent } from './components/leg/leg.component';
 import { MapComponent } from './components/map/map.component';
 import { TeamComponent } from './components/team/team.component';
+import { FloorplanComponent } from './components/floorplan/floorplan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LegComponent,
     MapComponent,
-    TeamComponent
+    TeamComponent,
+    FloorplanComponent
   ],
   imports: [
     BrowserModule,

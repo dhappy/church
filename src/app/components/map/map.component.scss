@@ -1,3 +1,20 @@
-svg {
-  transform: translate(10px, 10px);
+.raised {
+  transition: 100ms ease-in-out;
 }
+
+.raised.left {
+  transform: translate(0, 0);
+
+  &:hover {
+    transform: translate(1px, -0.75px);
+  }
+}
+
+.raised.right {
+  transform: translate(0, 0);
+
+  &:hover {
+    transform: translate(-1px, -0.75px);
+  }
+}
+
