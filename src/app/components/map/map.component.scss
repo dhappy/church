@@ -18,3 +18,12 @@
   }
 }
 
+@namespace html 'http://www.w3.org/1999/xhtml';
+
+foreignObject {
+  pointer-events : none;
+
+  h1, html|h1, .infobox h1 {
+    font-size: 1px;
+  }
+} 

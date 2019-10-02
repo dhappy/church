@@ -7,6 +7,7 @@ import { LegComponent } from './components/leg/leg.component';
 import { MapComponent } from './components/map/map.component';
 import { TeamComponent } from './components/team/team.component';
 import { FloorplanComponent } from './components/floorplan/floorplan.component';
+import { MarkdownModule } from 'ngx-markdown'
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { FloorplanComponent } from './components/floorplan/floorplan.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: []
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

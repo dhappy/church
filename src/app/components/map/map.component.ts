@@ -9,6 +9,7 @@ import { Team } from 'src/app/models/Team';
 })
 export class MapComponent implements OnInit {
   public hovered:string = 'test'
+  public description:string
   public legs = (
     [
       'm 100,73  0,  9  40,-25  36,14 -36,-23 z',
@@ -54,6 +55,11 @@ export class MapComponent implements OnInit {
     { rune: '🐲', name: 'Níðhöggr', inhabitants: 'Dragon who gnaws at Yggdrasil' },
     { rune: '🐿️', name: 'Ratatoskr', inhabitants: 'Squirrel who lives in Yggdrasil' },
     { rune: '🦅', name: 'Veðrfölnir', inhabitants: 'Hawk sitting on an eagle perched on Yggdrasil' },
+  ]
+
+  public descriptions = [
+    "# Silver (Giants)\n\nFarmers' Market. Doors are keyed to an ID verified through mail sent to the voter registration address.",
+    "# Orange (Humans)\n\nBodega. Ids are based on government issued ones.",
   ]
 
   public teams = (
@@ -116,6 +122,7 @@ export class MapComponent implements OnInit {
           id: `team-${idx}`,
           name: this.realms[idx].inhabitants,
           icon: this.realms[idx].rune,
+          description: this.descriptions[idx],
         }
       ))
     )
@@ -127,9 +134,11 @@ export class MapComponent implements OnInit {
 
   mouseover(part) {
     this.hovered = part.name
+    this.description = part.description
   }
 
   mouseout(part) {
     this.hovered = ''
+    this.description = ''
   }
 }

@@ -23,4 +23,9 @@
     ></g>
   </ng-template>
   <text x='50%' y='0.75em'>{{hovered}}</text>
+  <ng-template [ngIf]='description'>
+    <foreignObject x="10%" y="1em" width="30%" height="60">
+      <html:div markdown [data]='description' class='infobox'></html:div>
+    </foreignObject>
+  </ng-template>
 </svg>

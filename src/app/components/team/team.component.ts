@@ -8,7 +8,8 @@ import { Team } from '../../models/Team'
 })
 export class TeamComponent implements OnInit {
   @Input() team:Team
-
+  public hovered:boolean = false
+  
   constructor() {}
 
   ngOnInit() {}
