@@ -7,4 +7,15 @@
   (panmove)='moveListener($event)'
   (mouseup)='releaseListener($event)'
   [class.selected]='grabbed'
+  (dblclick)='dblclick($event)'
+  [id]='guid'
 ></svg:line>
+<ng-template [ngIf]=''>
+</ng-template>
+<svg:text>
+  <svg:textPath
+   [attr.xlink:href]='"#" + guid'
+   startOffset="50%"
+   text-anchor="middle"
+  >{{length}}</svg:textPath>
+</svg:text>

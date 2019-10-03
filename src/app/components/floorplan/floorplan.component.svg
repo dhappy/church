@@ -9,8 +9,6 @@
 >
   <defs><title>Church</title></defs>
   <ng-template ngFor let-wall [ngForOf]='walls'>
-    <svg:path [attr.d]='wall.path' class='wall'></svg:path>
-
     <ng-template ngFor
      let-point [ngForOf]='wall.points'
      let-i='index' let-count='count'
@@ -28,6 +26,9 @@
         ></g>
       </ng-template>
     </ng-template>
+
+    <svg:path [attr.d]='wall.path' class='wall'></svg:path>
+
     <ng-template ngFor let-point [ngForOf]='wall.points' let-i='index'>
       <svg:circle
        (panmove)='movePoint($event, point)'

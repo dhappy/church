@@ -15,8 +15,12 @@ export class FloorplanComponent implements OnInit {
   ngOnInit() {}
 
   public movePoint(evt, point) {
-    let trans = this.translatePoint(evt.center)
+    let trans = Point.toCanvas(evt.center)
     point.x = trans.x
     point.y = trans.y
+  }
+
+  public break(p1, p2, point) {
+    console.debug('BRK', arguments)
   }
 }
