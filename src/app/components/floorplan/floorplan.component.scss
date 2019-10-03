@@ -1,0 +1,22 @@
+path {
+  stroke: darkviolet;
+  fill-rule: evenodd;
+  fill-opacity: 0.25;
+}
+
+circle {
+  stroke: darkgrey;
+  stroke-width: 0.5px;
+
+  &:hover {
+    fill: green;
+  }
+}
+
+line {
+  stroke: darkgreen;
+
+  &:hover {
+    stroke: aquamarine;
+  }
+}

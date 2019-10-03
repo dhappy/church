@@ -1,7 +1,7 @@
 export class Point {
   id:string
-  x:string
-  y:string
+  x:number
+  y:number
 
   constructor(base?:any) {
     Object.assign(this, base)

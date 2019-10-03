@@ -1,4 +1,5 @@
 import { Point } from './Point'
+import { DerivedPoint } from './DerivedPoint'
 
 export class Wall {
   id:string
@@ -6,9 +7,29 @@ export class Wall {
 
   constructor(base?:any) {
     Object.assign(this, base)
+
+    this.points = [new Point({x: 20, y: 20})]
+
+    this.points.push(new DerivedPoint(
+      this.points[this.points.length - 1],
+      x => x + 25
+    ))
+    this.points.push(new DerivedPoint(
+      this.points[this.points.length - 1],
+      undefined,
+      y => y + 25
+    ))
+    this.points.push(new DerivedPoint(
+      this.points[this.points.length - 1],
+      x => x - 25
+    ))
   }
 
   get path():string {
-    return 'm 0,0 l 25,25'
+    let path = 'M'
+    this.points.forEach(point => {
+      path += ` ${point.x},${point.y}`
+    })
+    return `${path} z`
   }
 }
