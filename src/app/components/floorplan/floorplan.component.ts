@@ -24,6 +24,7 @@ export class FloorplanComponent implements OnInit {
 
   public grabLine(evt, p1, p2) {
     let trans = this.translatePoint(evt.center)
+    console.info('GRB', trans)
     this.ds.x1 = p1.x - trans.x
     this.ds.x2 = p2.x - trans.x
     this.ds.y1 = p1.y - trans.y
@@ -32,6 +33,7 @@ export class FloorplanComponent implements OnInit {
 
   public moveLine(evt, p1, p2) {
     let trans = this.translatePoint(evt.center)
+    console.info('MV', trans)
     p1.x = trans.x + this.ds.x1
     p1.y = trans.y + this.ds.y1
     p2.x = trans.x + this.ds.x2
@@ -39,7 +41,7 @@ export class FloorplanComponent implements OnInit {
   }
 
   translatePoint(point:Point):Point {
-    let svg = document.getElementById('canvas')
+    let svg = <SVGSVGElement><unknown>document.getElementById('canvas')
     var pt = svg.createSVGPoint();
 
     pt.x = point.x

@@ -1,5 +1,5 @@
 export class Point {
-  id:string
+  id?:string
   x:number
   y:number
 

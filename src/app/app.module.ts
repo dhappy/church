@@ -7,7 +7,8 @@ import { LegComponent } from './components/leg/leg.component';
 import { MapComponent } from './components/map/map.component';
 import { TeamComponent } from './components/team/team.component';
 import { FloorplanComponent } from './components/floorplan/floorplan.component';
-import { MarkdownModule } from 'ngx-markdown'
+import { MarkdownModule } from 'ngx-markdown';
+import { LineComponent } from './components/line/line.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MarkdownModule } from 'ngx-markdown'
     LegComponent,
     MapComponent,
     TeamComponent,
-    FloorplanComponent
+    FloorplanComponent,
+    LineComponent
   ],
   imports: [
     BrowserModule,
