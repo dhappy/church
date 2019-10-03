@@ -35,4 +35,8 @@ export class DerivedPoint {
   set y(y) {
     this.fy = () => y
   }
+
+  public toString():string {
+    return `${this.x},${this.y}`
+  }
 }
