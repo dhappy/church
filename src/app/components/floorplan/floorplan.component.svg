@@ -16,24 +16,16 @@
      let-i='index' let-count='count'
     >
       <ng-template [ngIf]='i === 0'>
-        <svg:line
-         [attr.x1]='wall.points[count - 1].x'
-         [attr.y1]='wall.points[count - 1].y'
-         [attr.x2]='point.x'
-         [attr.y2]='point.y'
-         (panstart)='grabLine($event, wall.points[count - 1], point)'
-         (panmove)='moveLine($event, wall.points[count - 1], point)'
-        ></svg:line>
+        <g app-line
+         [p1]='wall.points[count - 1]'
+         [p2]='point'
+        ></g>
       </ng-template>
       <ng-template [ngIf]='i >= 1'>
-        <svg:line
-         [attr.x1]='wall.points[i - 1].x'
-         [attr.y1]='wall.points[i - 1].y'
-         [attr.x2]='point.x'
-         [attr.y2]='point.y'
-         (panstart)='grabLine($event, wall.points[i - 1], point)'
-         (panmove)='moveLine($event, wall.points[i - 1], point)'
-        ></svg:line>
+        <g app-line
+         [p1]='wall.points[i - 1]'
+         [p2]='point'
+        ></g>
       </ng-template>
     </ng-template>
     <ng-template ngFor let-point [ngForOf]='wall.points' let-i='index'>

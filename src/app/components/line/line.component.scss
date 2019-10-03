@@ -1,0 +1,15 @@
+line {
+  stroke: darkgreen;
+
+  &:hover {
+    stroke: aquamarine;
+  }
+}
+
+.selected {
+  stroke: red;
+
+  &:hover {
+    stroke: orangered;
+  }
+}
