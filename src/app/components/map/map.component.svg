@@ -9,7 +9,7 @@
 >
   <defs><title>Church</title></defs>
   <ng-template ngFor let-leg [ngForOf]='legs'>
-    <g app-leg [leg]='leg' (mouseover)='mouseover(leg)' mouseout='mouseout(leg)'></g>
+    <g app-leg [leg]='leg' (mouseover)='mouseover(leg)' (mouseout)='mouseout(leg)'></g>
   </ng-template>
   <ng-template ngFor let-team [ngForOf]='teams' let-idx='index'>
     <g

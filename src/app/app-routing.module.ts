@@ -5,6 +5,11 @@ import { FloorplanComponent } from './components/floorplan/floorplan.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'map',
+    pathMatch: 'full',
+  },
+  {
     path: 'map',
     component: MapComponent,
   },

@@ -13,16 +13,18 @@
      let-point [ngForOf]='wall.points'
      let-i='index' let-count='count'
     >
-      <ng-template [ngIf]='i === 0'>
+      <ng-template [ngIf]='i + 1 < count'>
         <g app-line
-         [p1]='wall.points[count - 1]'
-         [p2]='point'
+         [p1]='point'
+         [p2]='wall.points[i + 1]'
+         [parent]='wall'
         ></g>
       </ng-template>
-      <ng-template [ngIf]='i >= 1'>
+      <ng-template [ngIf]='i + 1 >= count'>
         <g app-line
-         [p1]='wall.points[i - 1]'
-         [p2]='point'
+         [p1]='point'
+         [p2]='wall.points[0]'
+         [parent]='wall'
         ></g>
       </ng-template>
     </ng-template>

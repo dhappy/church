@@ -30,12 +30,28 @@ export class MapComponent implements OnInit {
           '4l', '4r', '5l', '5r'
         ]
         let alliances = [
-          'Blue', 'Blue', 'Purple', 'Purple', 'Red'
+          'b', 'b', 'p', 'p', 'r', 'p',
+          'p', 'r', 'b', 'r'
         ]
+        let alInfo = {
+          r: {
+            name: 'Red Alliance',
+            description: "# Red Alliance\n\nMeant to be run by women, and, ultimately to control more than 50% of the land in the world.",
+          },
+          p: {
+            name: 'Purple Alliance',
+            description: "# Purple Alliance\n\nMeant to be run by whoever is most fit.\n\nIn the war of the sexes they act as intermediaries.\n\nControl of spaces will often cycle through a red team, then purple, blue, and purple again before repeating.",
+          },
+          b: {
+            name: 'Blue Alliance',
+            description: "# Blue Alliance\n\nMeant to be run by men.",
+          },
+        }
         return new Leg({
           id: `leg-${positions[idx]}`,
           path: path,
-          name: 'BLUE',
+          name: alInfo[alliances[idx]].name,
+          description: alInfo[alliances[idx]].description,
         })
       }
     )
@@ -44,12 +60,12 @@ export class MapComponent implements OnInit {
   public realms = [
     { rune: 'ᚦ', name: 'Jötunheimr', inhabitants: 'Giants' },
     { rune: 'ᛗ', name: 'Miðgarðr', inhabitants: 'Humans' },
-    { rune: '🌳', name: 'Yggdrasil', inhabitants: 'All non-human life' },
+    { rune: 'ᛁ', name: 'Niflheimr', inhabitants: 'Ice' },
     { rune: 'ᚡ', name: 'Vanaheimr', inhabitants: 'Sages' },
     { rune: 'ᛠ', name: 'Svartálfaheimr', inhabitants: 'Dwarves' },
     { rune: 'ᛃ', name: 'Álfheimr', inhabitants: 'Elves' },
     { rune: 'ᛊ', name: 'Múspellsheimr', inhabitants: 'Fire' },
-    { rune: 'ᛁ', name: 'Niflheimr', inhabitants: 'Ice' },
+    { rune: '🌳', name: 'Yggdrasil', inhabitants: 'Non-Human Life' },
     { rune: 'ᚫ', name: 'Ásgarðr', inhabitants: 'Heroes' },
     { rune: 'ᛏ', name: 'Hel', inhabitants: 'Corpses' },
     { rune: '🐲', name: 'Níðhöggr', inhabitants: 'Dragon who gnaws at Yggdrasil' },
@@ -58,8 +74,16 @@ export class MapComponent implements OnInit {
   ]
 
   public descriptions = [
-    "# Silver (Giants)\n\nFarmers' Market. Doors are keyed to an ID verified through mail sent to the voter registration address.",
-    "# Orange (Humans)\n\nBodega. Ids are based on government issued ones.",
+    "# Silver (Giants)\n\n## Captain: [Herb Gardner](//fb.me)\n\nFarmers' Market. All the teams can issue ids that will open the doors.",
+    "# Orange (Humans)\n\nBodega. Ids are traditional government issued ones.",
+    "# White (Ice)\n\nMatela-based sitting/sleeping room w/ head shop. Door keyed to ids verfied through mail to a voter registration address.",
+    "# Yellow (Sages)\n\nA venue and bar. Door list uses purple alliance ids.",
+    "# Cyan (Dwarves)\n\n## Captain: [Will Holcomb](//fb.me/dysbulic)\n\n20 coding workstations. Each team sends a pair of developers for a two-week sprint.\n\nAll the software is open-source.\n\nSome the functionality is outlined in [my Presidential platform](//github.com/dysbulic/PotUs).",
+    "# Pink (Elves)\n\n## Captain: [Cricket](//fb.me)\n\nArt department.",
+    "# Black (Fire)\n\n## Captain: [Demitrius Whitfield](//fb.me)\n\nHotel rooms. Doors keyed using building ids.\n\nSome rooms are open to reservation online. All transactions are in IOTA.",
+    "# Green (Yggdrasil)\n\n## Captain: Savage Williams\n\nSpace for animals w/ access to greenspace on the roof.",
+    "# Gold (Heros)\n\nA brothel and porn production site.",
+    "# Copper (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.",
   ]
 
   public teams = (
@@ -67,7 +91,7 @@ export class MapComponent implements OnInit {
       {
         path: 'm 0,0 v 9 l 7,4.5 v -9 z',
         width: 7, height: 13.5,
-        x: 93, y: 68.5
+        x: 93, y: 68.5,
       },
       {
         path: 'm 0,4.5 v 9 l 7,-4.5 v -9 z',

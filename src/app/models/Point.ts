@@ -9,7 +9,7 @@ export class Point {
 
   static toCanvas(point:Point):Point {
     let svg = <SVGSVGElement><unknown>document.getElementById('canvas')
-    let pt = svg.createSVGPoint();
+    let pt = svg.createSVGPoint()
 
     pt.x = point.x
     pt.y = point.y
@@ -19,5 +19,27 @@ export class Point {
 
   public toString():string {
     return `${this.x},${this.y}`
+  }
+
+  public distanceTo?(p:Point) {
+    return Math.sqrt(
+      Math.pow(p.x - this.x, 2)
+      + Math.pow(p.y - this.y, 2)
+    )
+  }
+
+  // https://www.geeksforgeeks.org/find-points-at-a-given-distance-on-a-line-of-given-slope/
+  public static at(
+    m:number, through:Point,distance:number
+  ):Point {
+    const inm = Math.sqrt(1 / (1 + m * m))
+
+    return new Point({
+      x: through.x + distance * inm,
+      y: (
+        through.y + distance
+        * (m === Infinity ? 1 : inm * m)
+      ),
+    })
   }
 }
