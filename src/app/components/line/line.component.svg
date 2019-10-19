@@ -1,8 +1,8 @@
 <svg:path
  [attr.d]='"M" + p1 + " " + p2'
  (mousedown)='grabListener($event)'
- (mousemove)='moveListener($event, "mouse")'
- (panmove)='moveListener($event, "pan")'
+ (mousemove)='moveListener($event)'
+ (panmove)='moveListener($event)'
  (mouseup)='releaseListener($event)'
  [class.selected]='grabbed'
  (dblclick)='dblclick($event)'

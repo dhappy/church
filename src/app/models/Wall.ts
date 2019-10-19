@@ -1,5 +1,6 @@
 import { Point } from './Point'
 import { DerivedPoint } from './DerivedPoint'
+import { CornerPoint } from './CornerPoint'
 
 export class Wall {
   id:string
@@ -28,18 +29,39 @@ export class Wall {
 
   public static width = 7
 
-  corner(p1, p2, breakpoint?) {
+  // On the side nearest the click point
+  corner(p1, p2, clickAt) {
     let m = (p2.y - p1.y) / (p2.x - p1.x)
-    let inm = -1 / m
+    let nearest = clickAt.nearest(p1, p2)
+    let step = m
 
-    let g1 = Point.at(inm, p2, Wall.width)
-    let g2 = Point.at(m, g1, 0)
+    if(Math.abs(step) === Infinity) {
+      step = p2.y - p1.y
+    }
+    if(step === 0) {
+      step = p2.x - p1.x
+    }
+    let factor = step / Math.abs(step)
+
+    if(nearest == p2) {
+      factor *= -1
+    }
+
+    console.info('S', m, step, factor, factor * Wall.width)
+
+    let g1 = Point.at(m, nearest, factor * Wall.width)
+    let g2 = new CornerPoint(p1, p2, g1)
+
+    console.info('Gs', g1, g2)
 
     const idx = this.points.indexOf(p1)
+    let ins = [g1, g2]
+    let insP = idx + 1
+
     this.points = (
-      this.points.slice(0, idx + 1)
-      .concat([g1, g2])
-      .concat(this.points.slice(idx + 1))
+      this.points.slice(0, insP)
+      .concat(ins)
+      .concat(this.points.slice(insP))
     )
   }
 
@@ -54,46 +76,14 @@ export class Wall {
       [c1, c2] = [c2, c1]
     }
 
-    let x = (p1, p2, c) => {
-      let m = (p2.y - p1.y) / (p2.x - p1.x)
-      let minv = -1 / m
-      let b1 = p1.y - m * p1.x
-      let b2 = c.y - minv * c.x
-      
-      if(m === 0) {
-        return c.x
-      } else if(m === Infinity) {
-        return p1.x
-      } else {
-        return (b2 - b1) / (m - minv)
-      }
-    }
+    let g1 = new CornerPoint(p1, p2, c1)
+    let g2 = new CornerPoint(p1, p2, c2)
 
-    let y = (p1, p2, c) => {
-      let m = (p2.y - p1.y) / (p2.x - p1.x)
-      let b = p1.y - m * p1.x
-      if(m === Infinity) {
-        return c.y
-      } else if(m === 0) {
-        return p1.y
-      } else {
-        return m * x(p1, p2, c) + b
-      }
-    }
-
-    let g1 = new DerivedPoint(
-      [p1, p2, c1], x, y
-    )
-
-    let g2 = new DerivedPoint(
-      [p1, p2, c2], x, y
-    )
-
-    const idx = this.points.indexOf(p1)
+    const idx = this.points.indexOf(p2)
     this.points = (
-      this.points.slice(0, idx + 1)
+      this.points.slice(0, idx)
       .concat([g1, c1, c2, g2])
-      .concat(this.points.slice(idx + 1))
+      .concat(this.points.slice(idx))
     )
   }
 }

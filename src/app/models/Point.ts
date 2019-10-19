@@ -13,8 +13,9 @@ export class Point {
 
     pt.x = point.x
     pt.y = point.y
+    pt = pt.matrixTransform(svg.getScreenCTM().inverse())
 
-    return pt.matrixTransform(svg.getScreenCTM().inverse())
+    return new Point({x: pt.x, y: pt.y })
   }
 
   public toString():string {
@@ -28,9 +29,22 @@ export class Point {
     )
   }
 
+  public nearest?() {
+    let sDist = Infinity
+    let nearest = null
+    for(let i = 0; i < arguments.length; i++) {
+      let dist = this.distanceTo(arguments[i])
+      if(dist < sDist) {
+        sDist = dist
+        nearest = arguments[i]
+      }
+    }
+    return nearest
+  }
+
   // https://www.geeksforgeeks.org/find-points-at-a-given-distance-on-a-line-of-given-slope/
   public static at(
-    m:number, through:Point,distance:number
+    m:number, through:Point, distance:number
   ):Point {
     const inm = Math.sqrt(1 / (1 + m * m))
 
@@ -38,7 +52,7 @@ export class Point {
       x: through.x + distance * inm,
       y: (
         through.y + distance
-        * (m === Infinity ? 1 : inm * m)
+        * (Math.abs(m) === Infinity ? 1 : inm * m)
       ),
     })
   }

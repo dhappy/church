@@ -58,18 +58,13 @@ export class LineComponent implements OnInit {
     this.grabbed = false
   }
 
-  private breakwidth = 7
-
   dblclick(evt) {
     let breakpoint = Point.toCanvas(new Point(
       { x: evt.clientX, y: evt.clientY }
     ))
-    if(
-      Math.max(
-        this.p1.distanceTo(breakpoint),
-        this.p1.distanceTo(breakpoint)
-      ) <= 3 * Wall.width / 4
-    ) {
+    let d1 = this.p1.distanceTo(breakpoint)
+    let d2 = this.p2.distanceTo(breakpoint)
+    if(Math.min(d1, d2) < Wall.width) {
       this.parent.corner(this.p1, this.p2, breakpoint)
     } else {
       this.parent.extrude(this.p1, this.p2, breakpoint)

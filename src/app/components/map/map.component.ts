@@ -64,26 +64,26 @@ export class MapComponent implements OnInit {
     { rune: 'ᚡ', name: 'Vanaheimr', inhabitants: 'Sages' },
     { rune: 'ᛠ', name: 'Svartálfaheimr', inhabitants: 'Dwarves' },
     { rune: 'ᛃ', name: 'Álfheimr', inhabitants: 'Elves' },
-    { rune: 'ᛊ', name: 'Múspellsheimr', inhabitants: 'Fire' },
-    { rune: '🌳', name: 'Yggdrasil', inhabitants: 'Non-Human Life' },
     { rune: 'ᚫ', name: 'Ásgarðr', inhabitants: 'Heroes' },
     { rune: 'ᛏ', name: 'Hel', inhabitants: 'Corpses' },
+    { rune: 'ᛊ', name: 'Múspellsheimr', inhabitants: 'Fire' },
+    { rune: '🌳', name: 'Yggdrasil', inhabitants: 'Non-Human Life' },
     { rune: '🐲', name: 'Níðhöggr', inhabitants: 'Dragon who gnaws at Yggdrasil' },
     { rune: '🐿️', name: 'Ratatoskr', inhabitants: 'Squirrel who lives in Yggdrasil' },
     { rune: '🦅', name: 'Veðrfölnir', inhabitants: 'Hawk sitting on an eagle perched on Yggdrasil' },
   ]
 
   public descriptions = [
-    "# Silver (Giants)\n\n## Captain: [Herb Gardner](//fb.me)\n\nFarmers' Market. All the teams can issue ids that will open the doors.",
-    "# Orange (Humans)\n\nBodega. Ids are traditional government issued ones.",
-    "# White (Ice)\n\nMatela-based sitting/sleeping room w/ head shop. Door keyed to ids verfied through mail to a voter registration address.",
-    "# Yellow (Sages)\n\nA venue and bar. Door list uses purple alliance ids.",
-    "# Cyan (Dwarves)\n\n## Captain: [Will Holcomb](//fb.me/dysbulic)\n\n20 coding workstations. Each team sends a pair of developers for a two-week sprint.\n\nAll the software is open-source.\n\nSome the functionality is outlined in [my Presidential platform](//github.com/dysbulic/PotUs).",
+    "# Silver (Giants)\n\n## Captain: [Herb Gardner](//fb.me)\n\nAll the teams can issue ids that will open the doors.\n\nThe building above has one primary purpose: to produce the highest quality software in reasonable time.\n\nMuch of that will be high-quality foodstuffs from around the world.\n\nI want for them to have a \"President's Kitchen\" where, they can order up whatever their heart desires &, sometimes with procurement delays, they get it.\n\n---\n\nThe building will run in terms of sprints. Some developers will get an invitation for some set of sprints in the future. At that point they pick dishes they might like to eat, drugs they might want to take, & people they might want to spend time with.\n\nThe system that coordinates those future needs and the desires of the present occupants is Argus.",
+    "# Orange (Humans)\n\nKitchens for the building and a pick-up counter.\n\nThe supply chain for everything is tracked and presented to the consumer beforehand.",
+    "# White (Ice)\n\nMatela-based sitting/sleeping room w/ head shop. Door keyed to ids verfied through mail to a voter registration address.\n\nOne of the big issues is how to allow consumption without running afoul of draconian drug laws.\n\nThe concept at this point is to create the interfaces for collaboratively designing the building and livestreaming select sections of it.",
+    "# Yellow (Sages)\n\nA venue and bar. Door list uses purple alliance ids.\n\nPrimary concern is entertainment and testing an AI for [shared time](http://dhappy.org/.../calendar/fractal/).",
+    "# Cyan (Dwarves)\n\n## Captain: [Will Holcomb](//fb.me/dysbulic)\n\nCoding workspaces.\n\nAll the software is open-source.\n\nSome the functionality is outlined in [my Presidential platform](//github.com/dysbulic/PotUs).",
     "# Pink (Elves)\n\n## Captain: [Cricket](//fb.me)\n\nArt department.",
-    "# Black (Fire)\n\n## Captain: [Demitrius Whitfield](//fb.me)\n\nHotel rooms. Doors keyed using building ids.\n\nSome rooms are open to reservation online. All transactions are in IOTA.",
-    "# Green (Yggdrasil)\n\n## Captain: Savage Williams\n\nSpace for animals w/ access to greenspace on the roof.",
     "# Gold (Heros)\n\nA brothel and porn production site.",
-    "# Copper (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.",
+    "# Copper (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.\n\nHow this works, I'm uncertain, but the existing system is only one of the ten teams, and their realm is, in my somewhat jaded opinion, the corpses.\n\nIt doesn't really make sense for them to be running the pharmacopia though.",
+    "# Black (Fire)\n\n## Captain: [Demitrius Whitfield](//fb.me)\n\nHotel rooms. Doors keyed using building ids.\n\nSome rooms are open to reservation online. All transactions are in IOTA.\n\nThis could be multiple floors.",
+    "# Green (Yggdrasil)\n\n## Captain: Savage Williams\n\nSpace for animals w/ access to greenspace on the roof.",
   ]
 
   public teams = (
