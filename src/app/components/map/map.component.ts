@@ -92,10 +92,10 @@ export class MapComponent implements OnInit {
     "# White (Ice)\n\nMatela-based sitting/sleeping room w/ head shop. Door keyed to ids verfied through mail to a voter registration address.\n\nOne of the big issues is how to allow consumption without running afoul of draconian drug laws.\n\nThe concept at this point is to create the interfaces for collaboratively designing the building and livestreaming select sections of it.",
     "# Yellow (Sages)\n\nA venue and bar. Door list uses purple alliance ids.\n\nPrimary concern is entertainment and testing an AI for [shared time](http://dhappy.org/.../calendar/fractal/).",
     "# Cyan (Dwarves)\n\n## Captain: [Will Holcomb](//fb.me/dysbulic)\n\nCoding workspaces and meeting places.\n\nSoftware foci include:\n\n* The toolset to write everything in. There is a huge ecosystem of software being developed in typescript that should be happening in ruby instead.\n\n* Much of the building is a testing-ground for various systems.\n\n+ Silver is responsible for procurement focusing on digitizing the supply chain, particularly with foodstuffs.",
-    "# Pink (Elves)\n\n## Captain: [Cricket](//fb.me)\n\nArt department.",
-    "# Copper (Heros)\n\nA brothel.\n\nThe core desires to be pandered to are the artists and coders creating the product on the third floor.",
-    "# Gold (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.\n\nThe US has some system for sourcing drugs for research. That system is used to provision this section.",
-    "# Black (Fire)\n\n## Captain: [Demitrius Whitfield](//fb.me)\n\nHotel rooms. Doors keyed using building ids.\n\nSome rooms are open to reservation online. All transactions are in IOTA.\n\nThis could be multiple floors.",
+    "# Pink (Elves)\n\n## Captain: [Cricket](//fb.me)\n\nGym.\n\n## Concomitant AI\n\n…",
+    "# Copper (Heros)\n\nA brothel.\n\nThe core desires to be pandered to are the artists and coders creating the product.\n\nPeople submit videos to apply for positions.\n\n",
+    "# Gold (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.\n\nThe US has some system for sourcing drugs for research. That system is used to provision this section.\n\n## Concomitant AI\n\n…",
+    "# Black (Fire)\n\n## Captain: [Demitrius Whitfield](//fb.me)\n\nI envision a collection of maybe 20 primary and 100 ancilary open-source projects.\n\nTen of those accumulate ~5 person teams from around the globe who stay in these hotel rooms.\n\nDoors keyed using building ids.\n\nSome rooms are open to reservation online. All transactions are in IOTA.\n\nThis would need to be multiple floors.",
     "# Green (Yggdrasil)\n\n## Captain: Savage Williams\n\nSpace for animals w/ access to greenspace on the roof.",
   ]
 
