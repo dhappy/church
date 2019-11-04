@@ -31,7 +31,7 @@ export class MapComponent implements OnInit {
         ]
         let alliances = [
           'b', 'b', 'p', 'p', 'r', 'p',
-          'p', 'r', 'b', 'r'
+          'b', 'r', 'p', 'r'
         ]
         let alInfo = {
           r: {
@@ -73,15 +73,28 @@ export class MapComponent implements OnInit {
     { rune: '🦅', name: 'Veðrfölnir', inhabitants: 'Hawk sitting on an eagle perched on Yggdrasil' },
   ]
 
+  public interests = {
+    pink: 'peace',
+    silver: 'worship',
+    cyan: 'war',
+    copper: 'shelter',
+    gold: 'trade',
+    white: 'substances',
+    black: 'sustenance',
+    green: 'non-represented life',
+    orange: 'threat mitigation',
+    yellow: 'over-taxed',
+  }
+
   public descriptions = [
-    "# Silver (Giants)\n\n## Captain: [Herb Gardner](//fb.me)\n\nAll the teams can issue ids that will open the doors.\n\nThe building above has one primary purpose: to produce the highest quality software in reasonable time.\n\nMuch of that will be high-quality foodstuffs from around the world.\n\nI want for them to have a \"President's Kitchen\" where, they can order up whatever their heart desires &, sometimes with procurement delays, they get it.\n\n---\n\nThe building will run in terms of sprints. Some developers will get an invitation for some set of sprints in the future. At that point they pick dishes they might like to eat, drugs they might want to take, & people they might want to spend time with.\n\nThe system that coordinates those future needs and the desires of the present occupants is Argus.",
-    "# Orange (Humans)\n\nKitchens for the building and a pick-up counter.\n\nThe supply chain for everything is tracked and presented to the consumer beforehand.",
+    "# Silver (Giants)\n\n## Captain: [Herb Gardner](//fb.me)\n\nAll the teams can issue ids that will open the doors.\n\nThe building above has one primary purpose: to produce the highest quality software in reasonable time.\n\nMuch of that will be high-quality foodstuffs from around the world.\n\nI want for them to have a \"President's Kitchen\" where, they can order up whatever their heart desires &, sometimes with procurement delays, they get it.\n\nThe building will run in terms of sprints. Some developers will get an invitation for some set of sprints in the future. At that point they pick dishes they might like to eat, drugs they might want to take, & people they might want to spend time with.\n\nThe system that coordinates those future needs and the desires of the present occupants is Argus.",
+    "# Orange (Humans)\n\nKitchens for the building and a pick-up counter.\n\nThe supply chain for everything is tracked and consumers are able to navigate a breakdown of the costs.\n\nThe software produced by the [DoH](//dhappy.org) is oriented toward ending war, homelessness, & hunger. Part of how this is acheived is through tithes that fill funding pools which can be used to suppliment purchaces.\n\nThe eventual goal is to get the pools filled to the point that hunger and homelessness go away along with the fear of them that looms over all our heads.",
     "# White (Ice)\n\nMatela-based sitting/sleeping room w/ head shop. Door keyed to ids verfied through mail to a voter registration address.\n\nOne of the big issues is how to allow consumption without running afoul of draconian drug laws.\n\nThe concept at this point is to create the interfaces for collaboratively designing the building and livestreaming select sections of it.",
     "# Yellow (Sages)\n\nA venue and bar. Door list uses purple alliance ids.\n\nPrimary concern is entertainment and testing an AI for [shared time](http://dhappy.org/.../calendar/fractal/).",
-    "# Cyan (Dwarves)\n\n## Captain: [Will Holcomb](//fb.me/dysbulic)\n\nCoding workspaces.\n\nAll the software is open-source.\n\nSome the functionality is outlined in [my Presidential platform](//github.com/dysbulic/PotUs).",
+    "# Cyan (Dwarves)\n\n## Captain: [Will Holcomb](//fb.me/dysbulic)\n\nCoding workspaces and meeting places.\n\nSoftware foci include:\n\n* The toolset to write everything in. There is a huge ecosystem of software being developed in typescript that should be happening in ruby instead.\n\n* Much of the building is a testing-ground for various systems.\n\n+ Silver is responsible for procurement focusing on digitizing the supply chain, particularly with foodstuffs.",
     "# Pink (Elves)\n\n## Captain: [Cricket](//fb.me)\n\nArt department.",
-    "# Gold (Heros)\n\nA brothel and porn production site.",
-    "# Copper (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.\n\nHow this works, I'm uncertain, but the existing system is only one of the ten teams, and their realm is, in my somewhat jaded opinion, the corpses.\n\nIt doesn't really make sense for them to be running the pharmacopia though.",
+    "# Copper (Heros)\n\nA brothel.\n\nThe core desires to be pandered to are the artists and coders creating the product on the third floor.",
+    "# Gold (Corpses)\n\n## Captain: [The PotUS]()\n\nA pharmocopia.\n\nThe US has some system for sourcing drugs for research. That system is used to provision this section.",
     "# Black (Fire)\n\n## Captain: [Demitrius Whitfield](//fb.me)\n\nHotel rooms. Doors keyed using building ids.\n\nSome rooms are open to reservation online. All transactions are in IOTA.\n\nThis could be multiple floors.",
     "# Green (Yggdrasil)\n\n## Captain: Savage Williams\n\nSpace for animals w/ access to greenspace on the roof.",
   ]
