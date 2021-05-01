@@ -16,3 +16,11 @@ text {
 #team-8 { fill: black }
 #team-7 { fill: #987122 }
 #team-6 { fill: #B87333 }
+
+.hovered {
+  transition: 100ms ease-in-out;
+}
+
+.hovered {
+  fill: red;
+}

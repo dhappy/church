@@ -8,7 +8,7 @@ import { Team } from 'src/app/models/Team';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  public hovered:string = 'test'
+  public hovered:string = 'First Gaianist Church'
   public description:string
   public legs = (
     [
@@ -87,7 +87,7 @@ export class MapComponent implements OnInit {
   }
 
   public descriptions = [
-    "# Silver (Giants)\n\n## Captain: [Herb Gardner](//fb.me)\n\nAll the teams can issue ids that will open the doors.\n\nThe building above has one primary purpose: to produce the highest quality software in reasonable time.\n\nMuch of that will be high-quality foodstuffs from around the world.\n\nI want for them to have a \"President's Kitchen\" where, they can order up whatever their heart desires &, sometimes with procurement delays, they get it.\n\nThe building will run in terms of sprints. Some developers will get an invitation for some set of sprints in the future. At that point they pick dishes they might like to eat, drugs they might want to take, & people they might want to spend time with.\n\nThe system that coordinates those future needs and the desires of the present occupants is Argus.",
+    "# Silver (Giants)\n\nThe building above has one primary purpose: to produce the highest quality software in reasonable time.\n\nThe rest of the build serves to try and meet the whims of the developers and artists. Much of that will be high-quality foodstuffs from around the world.\n\nMidguard, next door, is a \"President's Kitchen\" where, they can order up whatever their heart desires & get it.\n\nThe building will run in terms of sprints. A developer will get an invitation for a period in the future.\n\nAt that point they pick dishes they might like to eat, drugs they might want to take, & people they might want to spend time with.\n\nThe system that coordinates those future needs and the desires of the present occupants is Argus.",
     "# Orange (Humans)\n\nKitchens for the building and a pick-up counter.\n\nThe supply chain for everything is tracked and consumers are able to navigate a breakdown of the costs.\n\nThe software produced by the [DoH](//dhappy.org) is oriented toward ending war, homelessness, & hunger. Part of how this is acheived is through tithes that fill funding pools which can be used to suppliment purchaces.\n\nThe eventual goal is to get the pools filled to the point that hunger and homelessness go away along with the fear of them that looms over all our heads.",
     "# White (Ice)\n\nMatela-based sitting/sleeping room w/ head shop. Door keyed to ids verfied through mail to a voter registration address.\n\nOne of the big issues is how to allow consumption without running afoul of draconian drug laws.\n\nThe concept at this point is to create the interfaces for collaboratively designing the building and livestreaming select sections of it.",
     "# Yellow (Sages)\n\nA venue and bar. Door list uses purple alliance ids.\n\nPrimary concern is entertainment and testing an AI for [shared time](http://dhappy.org/.../calendar/fractal/).",
@@ -177,5 +177,9 @@ export class MapComponent implements OnInit {
   mouseout(part) {
     this.hovered = ''
     this.description = ''
+  }
+
+  click() {
+    console.info('CLK')
   }
 }

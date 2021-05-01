@@ -5,7 +5,8 @@
   <svg:g
    [class.hovered]='hovered'
    (mouseover)='hovered = true'
-   (mouseout)='hovered = false'
+   (mouseout)='hovered = held'
+   (click)='held = !held'
   >
     <svg:path
      [attr.d]='team.path'
