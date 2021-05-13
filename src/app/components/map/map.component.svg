@@ -1,0 +1,31 @@
+<svg
+ xmlns:html='http://www.w3.org/1999/xhtml'
+ xmlns:xlink='http://www.w3.org/1999/xlink'
+ xmlns="http://www.w3.org/2000/svg"
+ width="100%" height="100%"
+ viewBox="0 0 200 100"
+ version="1.1"
+ id="A Gaianist Church"
+>
+  <defs><title>Church</title></defs>
+  <ng-template ngFor let-leg [ngForOf]='legs'>
+    <g app-leg [leg]='leg' (mouseover)='mouseover(leg)' (mouseout)='mouseout(leg)'></g>
+  </ng-template>
+  <ng-template ngFor let-team [ngForOf]='teams' let-idx='index'>
+    <g
+     app-team [team]='team'
+     (mouseover)='mouseover(team)'
+     (mouseout)='mouseout(team)'
+     [ngClass]='[
+       "raised",
+       idx % 2 !== 0 ? "left" : "right"
+     ]'
+    ></g>
+  </ng-template>
+  <text x='50%' y='0.75em'>{{hovered}}</text>
+  <ng-template [ngIf]='description'>
+    <foreignObject x="10%" y="1em" width="30%" height="60vh">
+      <html:div markdown [data]='description' class='infobox'></html:div>
+    </foreignObject>
+  </ng-template>
+</svg>

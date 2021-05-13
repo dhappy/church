@@ -1,0 +1,16 @@
+path {
+  stroke: darkviolet;
+  stroke-width: 0.1px;
+  fill-rule: evenodd;
+  fill-opacity: 0.25;
+  pointer-events: none;
+}
+
+circle {
+  stroke: darkgrey;
+  stroke-width: 0.5px;
+
+  &:hover {
+    fill: green;
+  }
+}

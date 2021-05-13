@@ -1,0 +1,14 @@
+.leg {
+  stroke: white;
+  //display: none;
+}
+#leg-5r {display: inline;}
+#leg-5r, #leg-4r, #leg-3l {
+  fill: #D00;
+}
+#leg-1r, #leg-1l, #leg-4l {
+  fill: #00D;
+}
+#leg-2l, #leg-2r, #leg-3r, #leg-5l {
+  fill: #D0D;
+}

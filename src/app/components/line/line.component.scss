@@ -1,0 +1,20 @@
+path {
+  stroke: darkgreen;
+  stroke-width: 1px;
+
+  &:hover {
+    stroke: aquamarine;
+  }
+}
+
+.measure {
+  font-size: 4px;
+}
+
+.selected {
+  stroke: red;
+
+  &:hover {
+    stroke: orangered;
+  }
+}

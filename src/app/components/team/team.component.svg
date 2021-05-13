@@ -1,0 +1,20 @@
+<svg:svg
+ [attr.width]='team.width' [attr.height]='team.height'
+ [attr.x]='team.x' [attr.y]='team.y'
+>
+  <svg:g
+   [class.hovered]='hovered'
+   (mouseover)='hovered = true'
+   (mouseout)='hovered = held'
+   (click)='held = !held'
+  >
+    <svg:path
+     [attr.d]='team.path'
+     [id]='team.id'
+     class='team'
+    ></svg:path>
+    <ng-template [ngIf]='team.icon'>
+      <svg:text x='50%' y='66%'>{{team.icon}}</svg:text>
+    </ng-template>
+  </svg:g>
+</svg:svg>

@@ -1,0 +1,29 @@
+.raised {
+  transition: 100ms ease-in-out;
+}
+
+.raised.left {
+  transform: translate(0, 0);
+
+  &:hover {
+    transform: translate(1px, -0.75px);
+  }
+}
+
+.raised.right {
+  transform: translate(0, 0);
+
+  &:hover {
+    transform: translate(-1px, -0.75px);
+  }
+}
+
+@namespace html 'http://www.w3.org/1999/xhtml';
+
+foreignObject {
+  pointer-events : none;
+
+  h1, html|h1, .infobox h1 {
+    font-size: 0.5px;
+  }
+} 
